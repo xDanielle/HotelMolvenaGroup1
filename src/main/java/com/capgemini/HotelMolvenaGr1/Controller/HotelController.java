@@ -44,11 +44,12 @@ public class HotelController {
     @RequestMapping("/api/room")
     public List<Room> getRooms(){
         RoomRegister newRoom = new RoomRegister();
-        newRoom.addRoom(ERoomType.STANDARD, true, 101, 89);
-        newRoom.addRoom(ERoomType.LUXURY, true, 201, 149);
-        newRoom.addRoom(ERoomType.HONEYMOON_SUITE, true, 301, 345);
+        newRoom.addRoom(ERoomType.STANDARD, true, 1, 89);
+        newRoom.addRoom(ERoomType.LUXURY, true, 2, 149);
+        newRoom.addRoom(ERoomType.HONEYMOON_SUITE, true, 3, 345);
         return newRoom.getRoomList();
     }
+
 
     // public void checkIn();
 
