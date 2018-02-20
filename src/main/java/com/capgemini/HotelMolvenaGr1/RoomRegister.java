@@ -27,5 +27,12 @@ public class RoomRegister {
     public void addRoom(ERoomType roomType, boolean isAvailable, int roomID, double defaultPrice) {
         roomList.add(new Room(roomType, isAvailable, roomID, defaultPrice));
     }
-    
+
+    public Room alterRoom(int roomID, ERoomType roomType){
+        if(room.getRoomID() == roomID){
+            this.room.setRoomType(ERoomType.HONEYMOON_SUITE);
+        } return room;
+
+    }
+
 }
