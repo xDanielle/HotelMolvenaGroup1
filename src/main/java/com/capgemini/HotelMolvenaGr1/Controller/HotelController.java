@@ -50,7 +50,6 @@ public class HotelController {
         return newRoom.getRoomList();
     }
 
-
     // public void checkIn();
 
     // public void checkOut();

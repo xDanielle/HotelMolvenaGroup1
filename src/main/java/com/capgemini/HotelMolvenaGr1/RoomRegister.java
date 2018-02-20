@@ -8,6 +8,7 @@ import java.util.Iterator;
 public class RoomRegister {
 
     private Room room;
+
     // List of rooms
 
     ArrayList<Room> roomList = new ArrayList<>();
@@ -28,11 +29,11 @@ public class RoomRegister {
         roomList.add(new Room(roomType, isAvailable, roomID, defaultPrice));
     }
 
-    public Room alterRoom(int roomID, ERoomType roomType){
-        if(room.getRoomID() == roomID){
+    public Room alterRoom(int roomID, ERoomType roomType) {
+        if (room.getRoomID() == roomID) {
             this.room.setRoomType(roomType);
-        } return room;
-
+        }
+        return room;
     }
 
 }
