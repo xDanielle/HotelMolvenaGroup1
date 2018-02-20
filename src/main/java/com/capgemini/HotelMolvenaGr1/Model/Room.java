@@ -1,6 +1,5 @@
 package com.capgemini.HotelMolvenaGr1.Model;
 import com.capgemini.HotelMolvenaGr1.ERoomType;
-import java.util.Date;
 
 public class Room {
 
