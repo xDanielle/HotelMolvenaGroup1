@@ -1,5 +1,6 @@
 package com.capgemini.HotelMolvenaGr1.Controller;
 import com.capgemini.HotelMolvenaGr1.Model.Guest;
+import com.capgemini.HotelMolvenaGr1.Room;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,11 +9,11 @@ public class HotelController {
 
     private Guest guest;
 
-    //private Room room
+    private Room room;
 
-    //private Staff staff
+    //private Staff staff;
 
-    //private Booking booking
+    //private Booking booking;
 
     @GetMapping("/voorbeeld")
     public String Voorbeeld() {
