@@ -1,6 +1,6 @@
-package com.capgemini.HotelMolvenaGr1;
+package com.capgemini.HotelMolvenaGr1.Model;
 
-import com.capgemini.HotelMolvenaGr1.Model.ERoomType;
+import com.capgemini.HotelMolvenaGr1.ERoomType;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,7 +25,6 @@ public class Room {
     ArrayList<Room> roomList = new ArrayList<>();
 
     // Constructor
-    public Room(){}
 
     public Room(ERoomType roomType, Date dateAvailable, int roomID, double defaultPrice) {
         this.roomType = roomType;
