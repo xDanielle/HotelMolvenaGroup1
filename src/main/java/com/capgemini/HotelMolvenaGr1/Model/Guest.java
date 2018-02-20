@@ -1,30 +1,34 @@
 package com.capgemini.HotelMolvenaGr1.Model;
 
+import java.util.ArrayList;
+
 public class Guest {
+    // start data of the guests
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String postalCode;
+    private String town;
+    private String country;
+    private String telephoneNumber;
+    private String emailAddress;
 
-        private String firstName;
 
-        private String lastName;
+    public Guest(String firstName, String lastName, String address, String postalCode, String town,
+                 String country, String telephoneNumber, String emailAddress) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.town = town;
+        this.country = country;
+        this.telephoneNumber = telephoneNumber;
+        this.emailAddress = emailAddress;
+    }
 
-        private int passportNumber;
-
-        private int phoneNumber;
-
-        private String emailAddress;
-
-        private boolean isCheckedIn;
-
-        public Guest (String firstName, String lastName, int passportNumber, int phoneNumber, String emailAddress){
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.passportNumber = passportNumber;
-            this.phoneNumber = phoneNumber;
-            this.emailAddress = emailAddress;
-        }
-
-        public void greetGuest() {
-            System.out.println("Welcome " + this.firstName + " " + this.lastName);
-        }
+    public void greetGuest(){
+        System.out.println("Welcome " + this.firstName + " " + this.lastName);
+    }
 
     public String getFirstName() {
         return firstName;
@@ -42,22 +46,6 @@ public class Guest {
         this.lastName = lastName;
     }
 
-    public int getPassportNumber() {
-        return passportNumber;
-    }
-
-    public void setPassportNumber(int passportNumber) {
-        this.passportNumber = passportNumber;
-    }
-
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
     public String getEmailAddress() {
         return emailAddress;
     }
@@ -66,11 +54,43 @@ public class Guest {
         this.emailAddress = emailAddress;
     }
 
-    public boolean isCheckedIn() {
-        return isCheckedIn;
+    public String getAddress() {
+        return address;
     }
 
-    public void setCheckedIn(boolean checkedIn) {
-        isCheckedIn = checkedIn;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getTown() {
+        return town;
+    }
+
+    public void setTown(String town) {
+        this.town = town;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getTelephoneNumber() {
+        return telephoneNumber;
+    }
+
+    public void setTelephoneNumber(String telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
     }
 }
