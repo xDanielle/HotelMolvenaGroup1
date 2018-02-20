@@ -38,6 +38,27 @@ public class HotelController {
         return newGuest.getGuestList();
     }
 
+    @RequestMapping("/api/found")
+    public String searchGuest(){
+        GuestRegister guest = new GuestRegister();
+        boolean result = guest.searchGuest("Sasha");
+        if(result) {
+            return "found";
+        }else{
+            return "not found";
+        }
+    }
+
+
+
+
+    @RequestMapping("/api/guest")
+    public List<Guest> removeGuest(){
+        GuestRegister removeGuest = new GuestRegister();
+        removeGuest.removeGuest("Sasha");
+        return removeGuest.getGuestList();
+    }
+
     // public void checkIn();
 
     // public void checkOut();
