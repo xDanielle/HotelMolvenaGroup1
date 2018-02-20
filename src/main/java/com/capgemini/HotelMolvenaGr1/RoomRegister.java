@@ -30,7 +30,7 @@ public class RoomRegister {
 
     public Room alterRoom(int roomID, ERoomType roomType){
         if(room.getRoomID() == roomID){
-            this.room.setRoomType(ERoomType.HONEYMOON_SUITE);
+            this.room.setRoomType(roomType);
         } return room;
 
     }
