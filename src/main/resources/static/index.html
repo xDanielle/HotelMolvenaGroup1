@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<heads>
+<head>
     <meta charset="UTF-8">
     <title>Hotel Applicatie Group 1</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Menu</a>
+
+    <!--This HTML file only contains the bootstrap navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navigation">
+        <a class="navbar-brand" href="index.html">Menu</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -16,36 +18,30 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" data-page="rooms">Kamers<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="rooms.html">Kamers<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Gasten</a>
+                    <a class="nav-link" href="guests.html">Gasten</a>
                 </li>
             </ul>
             <!--Hieronder staat een searchbar voor in het menu, momenteel even gedisabled-->
             <!--<form class="form-inline my-2 my-lg-0">-->
-                <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-                <!--<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>-->
+            <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+            <!--<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>-->
             <!--</form>-->
         </div>
     </nav>
-</heads>
+</head>
 
 <body>
 
-<!--// In de class container wordt via jquery de html bestanden ingeladen wanneer er op een menu item wordt geklikt. Niet weghalen dus! (Daniëlle)-->
-<div class="container"></div>
 
-<div align="center" id="welcomeMessage">
-    <br>
-    <h1>Hallo Allemaal, wat fijn dat je er bent!</h1><br>
-    <hr>
-    <br>
-    <iframe width="420" height="315"
-            src="https://www.youtube.com/embed/2mz165_R4fo">
-    </iframe>
-</div>
+<br>
+<br>
+<h1>Dit is de homepagina</h1>
+
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
