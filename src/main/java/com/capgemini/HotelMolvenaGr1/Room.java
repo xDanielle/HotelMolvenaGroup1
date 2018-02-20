@@ -33,6 +33,10 @@ public class Room {
 
     }
 
+    public void addRoom(){
+        
+    }
+
     public double calculateEventPrice() {
         double eventPrice = defaultPrice * 2;
         System.out.println("The new price of the room is: " + eventPrice + " euro.");
