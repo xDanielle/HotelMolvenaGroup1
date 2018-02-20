@@ -3,7 +3,7 @@ package com.capgemini.HotelMolvenaGr1;
 import com.capgemini.HotelMolvenaGr1.Model.ERoomType;
 import java.util.Date;
 
-public abstract class Room {
+public class Room {
 
     // Variabelen
     private ERoomType roomType;
