@@ -1,9 +1,12 @@
 package com.capgemini.HotelMolvenaGr1.Controller;
+import com.capgemini.HotelMolvenaGr1.ERoomType;
 import com.capgemini.HotelMolvenaGr1.Model.Guest;
 import com.capgemini.HotelMolvenaGr1.Model.GuestRegister;
 import com.capgemini.HotelMolvenaGr1.Model.Room;
+import com.capgemini.HotelMolvenaGr1.RoomRegister;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -36,6 +39,15 @@ public class HotelController {
         newGuest.addGuest("Frank", "Vollebregt", "Sportlaan 116", "1072GG",
                 "Paris", "Netheraldo", "8282282883", "volle@gmail.com");
         return newGuest.getGuestList();
+    }
+
+    @RequestMapping("/api/room")
+    public List<Room> getRooms(){
+        RoomRegister newRoom = new RoomRegister();
+        newRoom.addRoom(ERoomType.STANDARD, true, 101, 89);
+        newRoom.addRoom(ERoomType.LUXURY, true, 201, 149);
+        newRoom.addRoom(ERoomType.HONEYMOON_SUITE, true, 301, 345);
+        return newRoom.getRoomList();
     }
 
     // public void checkIn();
