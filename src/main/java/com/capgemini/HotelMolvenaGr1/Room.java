@@ -1,6 +1,8 @@
 package com.capgemini.HotelMolvenaGr1;
 
 import com.capgemini.HotelMolvenaGr1.Model.ERoomType;
+
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Room {
@@ -18,6 +20,10 @@ public class Room {
 
     private int numberOfBeds;
 
+    // List of rooms
+
+    ArrayList<Room> roomList = new ArrayList<>();
+
     // Constructor
     public Room(){}
 
@@ -31,6 +37,11 @@ public class Room {
     // Methodess
     public void alterRoom(){
 
+    }
+
+    public void addRoom(Room room){
+        // adds a room to the list of all rooms.
+        roomList.add(room);
     }
 
     public double calculateEventPrice() {
