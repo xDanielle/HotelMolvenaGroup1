@@ -5,18 +5,10 @@ public class Room {
 
     // Variabelen
     private ERoomType roomType;
-
-//    private Date dateAvailable;
-
     private boolean isAvailable;
-
     private int roomID;
-
-//    private int roomSize;
-
     private double defaultPrice;
 
-//    private int numberOfBeds;
 
     // Constructor
 
@@ -54,13 +46,6 @@ public class Room {
         this.roomID = roomID;
     }
 
-//    public int getRoomSize() {
-//        return roomSize;
-//    }
-//
-//    public void setRoomSize(int roomSize) {
-//        this.roomSize = roomSize;
-//    }
 
     public double getDefaultPrice() {
         return defaultPrice;
@@ -70,13 +55,6 @@ public class Room {
         this.defaultPrice = defaultPrice;
     }
 
-//    public int getNumberOfBeds() {
-//        return numberOfBeds;
-//    }
-//
-//    public void setNumberOfBeds(int numberOfBeds) {
-//        this.numberOfBeds = numberOfBeds;
-//    }
 
     // Methodess
     public void alterRoom(){
