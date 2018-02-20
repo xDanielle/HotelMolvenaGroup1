@@ -1,6 +1,6 @@
 package com.capgemini.HotelMolvenaGr1.Controller;
 import com.capgemini.HotelMolvenaGr1.Model.Guest;
-import com.capgemini.HotelMolvenaGr1.Room;
+import com.capgemini.HotelMolvenaGr1.Model.Room;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +19,6 @@ public class HotelController {
     public String Voorbeeld() {
         return "<h1> Het voorbeeld werkt ook! <br><br> Verander deze pagina in de HotelController </h1>";
     }
-
 
     public void greet(){
         guest.greetGuest();
