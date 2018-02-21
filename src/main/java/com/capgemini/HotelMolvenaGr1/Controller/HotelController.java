@@ -1,12 +1,11 @@
 package com.capgemini.HotelMolvenaGr1.Controller;
 import com.capgemini.HotelMolvenaGr1.ERoomType;
-import com.capgemini.HotelMolvenaGr1.Model.Guest;
-import com.capgemini.HotelMolvenaGr1.Model.GuestRegister;
+import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
+import com.capgemini.HotelMolvenaGr1.Repository.GuestRegister;
 import com.capgemini.HotelMolvenaGr1.Model.Room;
 import com.capgemini.HotelMolvenaGr1.RoomRegister;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;

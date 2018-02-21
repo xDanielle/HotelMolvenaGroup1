@@ -1,4 +1,6 @@
-package com.capgemini.HotelMolvenaGr1.Model;
+package com.capgemini.HotelMolvenaGr1.Repository;
+
+import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
 
 import java.util.ArrayList;
 
@@ -35,7 +37,7 @@ public class GuestRegister {
         public void setGuestList (ArrayList < Guest > guestList) {
             this.guestList = guestList;
         }
-        
+
 }
 
 
