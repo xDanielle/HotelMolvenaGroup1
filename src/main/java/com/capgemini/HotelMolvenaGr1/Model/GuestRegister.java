@@ -11,22 +11,22 @@ public class GuestRegister {
                 address, postalCode, town, country, telephoneNumber, emailAddress));
     }
 
-    public boolean searchGuest(String firstName) {
-            for(Guest list : guestList){
-                if(list.equals(firstName)){
-                    return true;
-                }
-            }
-            return false;
-    }
-
-    public void removeGuest(String firstName) {
-        for(Guest list : guestList){
-            if(list.equals(firstName)){
-                guestList.remove(firstName);
-            }
-        }
-    }
+//    public boolean searchGuest(String firstName) {
+//            for(Guest list : guestList){
+//                if(list.equals(firstName)){
+//                    return true;
+//                }
+//            }
+//            return false;
+//    }
+//
+//    public void removeGuest(String firstName) {
+//        for(Guest list : guestList){
+//            if(list.equals(firstName)){
+//                guestList.remove(firstName);
+//            }
+//        }
+//    }
 
         public ArrayList<Guest> getGuestList () {
             return guestList;

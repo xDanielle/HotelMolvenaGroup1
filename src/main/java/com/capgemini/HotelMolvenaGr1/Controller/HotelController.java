@@ -1,9 +1,12 @@
 package com.capgemini.HotelMolvenaGr1.Controller;
+import com.capgemini.HotelMolvenaGr1.ERoomType;
 import com.capgemini.HotelMolvenaGr1.Model.Guest;
 import com.capgemini.HotelMolvenaGr1.Model.GuestRegister;
 import com.capgemini.HotelMolvenaGr1.Model.Room;
+import com.capgemini.HotelMolvenaGr1.RoomRegister;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -38,25 +41,13 @@ public class HotelController {
         return newGuest.getGuestList();
     }
 
-    @RequestMapping("/api/found")
-    public String searchGuest(){
-        GuestRegister guest = new GuestRegister();
-        boolean result = guest.searchGuest("Sasha");
-        if(result) {
-            return "found";
-        }else{
-            return "not found";
-        }
-    }
-
-
-
-
-    @RequestMapping("/api/guest")
-    public List<Guest> removeGuest(){
-        GuestRegister removeGuest = new GuestRegister();
-        removeGuest.removeGuest("Sasha");
-        return removeGuest.getGuestList();
+    @RequestMapping("/api/room")
+    public List<Room> getRooms(){
+        RoomRegister newRoom = new RoomRegister();
+        newRoom.addRoom(ERoomType.STANDARD, true, 1, 89);
+        newRoom.addRoom(ERoomType.LUXURY, true, 2, 149);
+        newRoom.addRoom(ERoomType.HONEYMOON_SUITE, true, 3, 345);
+        return newRoom.getRoomList();
     }
 
     // public void checkIn();
