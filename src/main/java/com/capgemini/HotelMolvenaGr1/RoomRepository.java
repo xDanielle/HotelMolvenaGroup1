@@ -5,7 +5,7 @@ import com.capgemini.HotelMolvenaGr1.Model.Room;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class RoomRegister {
+public class RoomRepository {
 
     private Room room;
 
@@ -29,11 +29,12 @@ public class RoomRegister {
         roomList.add(new Room(roomType, isAvailable, roomID, defaultPrice));
     }
 
-    public Room alterRoom(int roomID, ERoomType roomType) {
-        if (room.getRoomID() == roomID) {
-            this.room.setRoomType(roomType);
-        }
-        return room;
-    }
+    // alter a roomType
+//    public Room alterRoom(int roomID, ERoomType roomType) {
+//        if (room.getRoomID() == roomID) {
+//            this.room.setRoomType(roomType);
+//        }
+//        return room;
+//    }
 
 }
