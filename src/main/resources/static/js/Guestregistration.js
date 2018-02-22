@@ -13,6 +13,36 @@ function postData() {
         return;
     }
 
+    if(inputFirstname == "") {
+        $("#errorMessage").val("Fill in first name.")
+        return;
+    }
+
+    if(inputAddress == "") {
+        $("#errorMessage").val("Fill in address.")
+        return;
+    }
+
+    if(inputPostalcode == "") {
+        $("#errorMessage").val("Fill in postal code.")
+        return;
+    }
+
+    if(inputTown == "") {
+        $("#errorMessage").val("Fill in town.")
+        return;
+    }
+
+    if(inputTelephonenumber == "") {
+        $("#errorMessage").val("Fill in telephone number.")
+        return;
+    }
+
+    if(inputEmail == "") {
+        $("#errorMessage").val("Fill in e-mail.")
+        return;
+    }
+
     var newGuestObject = {
         lastName : inputLastname,
         firstName : inputFirstname,
@@ -47,8 +77,3 @@ function postData() {
         }
     });
 }
-/*
-$(document).ready(function() {
-    getData();
-});
-*/
