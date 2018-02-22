@@ -35,10 +35,51 @@
 
 <br>
 <br>
-<h1>Dit is de kamer pagina</h1>
 
 
 
+<div class="container-fluid">
+
+    <h2> Voeg een kamer toe: </h2>
+
+    <input type="text" id="RoomID" name="RoomID" placeholder="Room ID" required>
+    <input type="text" id="RoomType" name="RoomType" placeholder="Room Type" required>
+    <input type="text" id="Price" name="Price" placeholder="Room Price" required>
+    <input type="text" id="Availability" name="Availability" placeholder="Availability" required>
+
+    <button type="button" class="btn btn-secondary" onclick="postData();">Add new room</button>
+
+
+    <br>
+    <br>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col" id="tableRoomID">Room ID</th>
+            <th scope="col" id="tableRoomType">Room Type</th>
+            <th scope="col" id="tablePrice">Price</th>
+            <th scope="col" id="tableAvailability">Availability</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Standard</td>
+            <td>89</td>
+            <td>true</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p id="listOfRooms">
+
+        placeholder
+
+    </p>
+
+
+
+</div>
 
 
 
