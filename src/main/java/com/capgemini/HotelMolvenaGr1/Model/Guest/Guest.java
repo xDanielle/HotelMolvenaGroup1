@@ -1,4 +1,4 @@
-package com.capgemini.HotelMolvenaGr1.Model;
+package com.capgemini.HotelMolvenaGr1.Model.Guest;
 
 import java.util.ArrayList;
 
@@ -13,18 +13,6 @@ public class Guest {
     private String telephoneNumber;
     private String emailAddress;
 
-
-    public Guest(String firstName, String lastName, String address, String postalCode, String town,
-                 String country, String telephoneNumber, String emailAddress) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.postalCode = postalCode;
-        this.town = town;
-        this.country = country;
-        this.telephoneNumber = telephoneNumber;
-        this.emailAddress = emailAddress;
-    }
 
     public void greetGuest(){
         System.out.println("Welcome " + this.firstName + " " + this.lastName);

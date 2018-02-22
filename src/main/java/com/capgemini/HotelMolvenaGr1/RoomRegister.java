@@ -3,7 +3,6 @@ package com.capgemini.HotelMolvenaGr1;
 import com.capgemini.HotelMolvenaGr1.Model.Room;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class RoomRegister {
 
