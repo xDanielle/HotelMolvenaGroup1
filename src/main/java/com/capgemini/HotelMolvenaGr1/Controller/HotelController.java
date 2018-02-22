@@ -3,9 +3,7 @@ import com.capgemini.HotelMolvenaGr1.ERoomType;
 import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
 import com.capgemini.HotelMolvenaGr1.Model.Room;
 import com.capgemini.HotelMolvenaGr1.RoomRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,13 +37,16 @@ public class HotelController {
 //        return newGuest.getGuestList();
 //    }
 
-    @RequestMapping("/api/room")
-    public List<Room> getRooms(){
-        RoomRepository newRoom = new RoomRepository();
-        newRoom.addRoom(ERoomType.STANDARD, true, 1, 89);
-        newRoom.addRoom(ERoomType.LUXURY, true, 2, 149);
-        newRoom.addRoom(ERoomType.HONEYMOON_SUITE, true, 3, 345);
-        return newRoom.getRoomList();
+    private RoomRepository roomRepository;
+
+    @RequestMapping(value = "api/rooms/get", method = RequestMethod.GET)
+    public Iterable<Room> index(){
+        return roomRepository.getRooms();
+    }
+
+    @RequestMapping(value = "api/rooms/save", method = RequestMethod.POST)
+    public void save(@RequestBody Room roomToSave){
+        roomRepository.save(roomToSave);
     }
 
     // public void checkIn();

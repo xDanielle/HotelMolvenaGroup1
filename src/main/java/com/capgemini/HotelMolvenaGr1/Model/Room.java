@@ -12,6 +12,8 @@ public class Room {
 
     // Constructor
 
+    public Room(){}
+
     public Room(ERoomType roomType, boolean isAvailable, int roomID, double defaultPrice) {
         this.roomType = roomType;
         this.isAvailable = isAvailable;

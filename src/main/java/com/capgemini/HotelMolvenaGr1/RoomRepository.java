@@ -1,32 +1,59 @@
 package com.capgemini.HotelMolvenaGr1;
 
 import com.capgemini.HotelMolvenaGr1.Model.Room;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
+@Repository
 public class RoomRepository {
 
     private Room room;
 
     // List of rooms
 
-    ArrayList<Room> roomList = new ArrayList<>();
+    ArrayList<Room> rooms = new ArrayList<>();
+
+    public RoomRepository() {
+    this.rooms = new ArrayList<>();
+
+    Room room1 = new Room();
+    room1.setRoomType(ERoomType.STANDARD);
+    room1.setAvailable(true);
+    room1.setRoomID(1);
+    room1.setDefaultPrice(89);
+
+    Room room2 = new Room();
+    room2.setRoomType(ERoomType.LUXURY);
+    room2.setAvailable(true);
+    room2.setRoomID(2);
+    room2.setDefaultPrice(149);
+
+    this.rooms.add(room1);
+    this.rooms.add(room2);
+
+    }
 
     // Getters setters
 
     public ArrayList<Room> getRoomList() {
-        return roomList;
+        return rooms;
     }
 
     public void setRoomList(ArrayList<Room> roomList) {
-        this.roomList = roomList;
+        this.rooms = roomList;
     }
 
     // Methodes
 
-    public void addRoom(ERoomType roomType, boolean isAvailable, int roomID, double defaultPrice) {
-        roomList.add(new Room(roomType, isAvailable, roomID, defaultPrice));
+
+    public ArrayList<Room> getRooms() {
+        return rooms;
+    }
+
+    public Room save(Room room){
+        rooms.add(room);
+        return room;
     }
 
     // alter a roomType
