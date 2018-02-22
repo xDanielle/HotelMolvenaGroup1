@@ -1,7 +1,12 @@
 function postData() {
-    // Get values from input texts.
     var inputLastname = $("#lastname").val();
     var inputFirstname = $("#firstname").val();
+    var inputAddress = $("#address").val();
+    var inputPostalcode = $("#postalcode").val();
+    var inputTown = $("#town").val();
+    var inputCountry = $("#country").val();
+    var inputTelephonenumber = $("#telephonenumber").val();
+    var inputEmail = $("#email").val();
 
     if(inputLastname == "") {
         $("#errorMessage").val("Fill in last name.")
@@ -10,7 +15,13 @@ function postData() {
 
     var newGuestObject = {
         lastname : inputLastname,
-        firstname : inputFirstname
+        firstname : inputFirstname,
+        address : inputAddress,
+        postalcode : inputPostalcode,
+        town : inputTown,
+        country : inputCountry,
+        telephonenumber : inputTelephonenumber,
+        email : inputEmail
     };
 
 
@@ -25,6 +36,12 @@ function postData() {
         success : function(data) {
             $("#lastname").val("");
             $("#firstname").val("");
+            $("#address").val("");
+            $("#postalcode").val("");
+            $("#town").val("");
+            $("#country").val("");
+            $("#telephonenumber").val("");
+            $("#email").val("");
             getData();
         }
     });
