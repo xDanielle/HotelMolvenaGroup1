@@ -13,7 +13,7 @@ public class RoomRepository {
 
     // List of rooms
 
-    ArrayList<Room> rooms = new ArrayList<>();
+    ArrayList<Room> rooms;
 
     public RoomRepository() {
     this.rooms = new ArrayList<>();
@@ -35,6 +35,20 @@ public class RoomRepository {
 
     }
 
+    public Room save(Room room){
+        rooms.add(room);
+        return room;
+    }
+
+    public ArrayList<Room> getRooms() {
+        return rooms;
+    }
+
+    public Room changeRoomType(Room room, ERoomType roomType){
+        this.room.setRoomType(roomType);
+        return room;
+    }
+
     // Getters setters
 
     public ArrayList<Room> getRoomList() {
@@ -48,19 +62,9 @@ public class RoomRepository {
     // Methodes
 
 
-    public ArrayList<Room> getRooms() {
-        return rooms;
-    }
 
-    public Room save(Room room){
-        rooms.add(room);
-        return room;
-    }
 
-    public Room changeRoomType(Room room, ERoomType roomType){
-        this.room.setRoomType(roomType);
-        return room;
-    }
+
 
     // alter a roomType
 //    public Room alterRoom(int roomID, ERoomType roomType) {
