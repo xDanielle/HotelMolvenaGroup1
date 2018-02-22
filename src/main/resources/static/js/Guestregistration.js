@@ -14,22 +14,23 @@ function postData() {
     }
 
     var newGuestObject = {
-        lastname : inputLastname,
-        firstname : inputFirstname,
+        lastName : inputLastname,
+        firstName : inputFirstname,
         address : inputAddress,
-        postalcode : inputPostalcode,
+        postalCode : inputPostalcode,
         town : inputTown,
         country : inputCountry,
-        telephonenumber : inputTelephonenumber,
-        email : inputEmail
+        telephoneNumber : inputTelephonenumber,
+        emailAddress : inputEmail
     };
 
 
 
     var newGuest = JSON.stringify(newGuestObject);
+    console.log(newGuest);
 
     $.ajax({
-        url : "http://localhost:8080/api/guest/save",
+        url : "http://localhost:8080/api/guest/saved",
         type : "post",
         data : newGuest,
         contentType : "application/json",
