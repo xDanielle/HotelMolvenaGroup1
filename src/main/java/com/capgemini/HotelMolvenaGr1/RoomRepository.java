@@ -56,6 +56,11 @@ public class RoomRepository {
         return room;
     }
 
+    public Room changeRoomType(Room room, ERoomType roomType){
+        this.room.setRoomType(roomType);
+        return room;
+    }
+
     // alter a roomType
 //    public Room alterRoom(int roomID, ERoomType roomType) {
 //        if (room.getRoomID() == roomID) {

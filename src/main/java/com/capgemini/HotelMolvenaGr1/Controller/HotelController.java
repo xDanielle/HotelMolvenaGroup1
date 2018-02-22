@@ -39,12 +39,12 @@ public class HotelController {
 
     private RoomRepository roomRepository;
 
-    @RequestMapping(value = "api/rooms/get", method = RequestMethod.GET)
+    @RequestMapping(value = "rooms/api/get", method = RequestMethod.GET)
     public Iterable<Room> index(){
         return roomRepository.getRooms();
     }
 
-    @RequestMapping(value = "api/rooms/save", method = RequestMethod.POST)
+    @RequestMapping(value = "rooms/api/save", method = RequestMethod.POST)
     public void save(@RequestBody Room roomToSave){
         roomRepository.save(roomToSave);
     }
