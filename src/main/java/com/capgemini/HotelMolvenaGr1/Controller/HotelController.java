@@ -1,7 +1,7 @@
 package com.capgemini.HotelMolvenaGr1.Controller;
 import com.capgemini.HotelMolvenaGr1.ERoomType;
-import com.capgemini.HotelMolvenaGr1.Model.Guest;
-import com.capgemini.HotelMolvenaGr1.Model.GuestRegister;
+import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
+import com.capgemini.HotelMolvenaGr1.Repository.GuestRegister;
 import com.capgemini.HotelMolvenaGr1.Model.Room;
 import com.capgemini.HotelMolvenaGr1.RoomRepository;
 import org.springframework.web.bind.annotation.*;
