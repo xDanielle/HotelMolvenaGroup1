@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 $(document).ready(function(){
     $.ajax({
@@ -17,3 +18,11 @@ $(document).ready(function(){
         }
     });
 });
+=======
+$.get("/api/guest", function(result){
+  console.log("guest:", result.newGuest.getGuestList());
+
+});
+
+
+>>>>>>> 1dd4ae977ea5ff5991f80fe79c4fc0e80ad4d21e

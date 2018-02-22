@@ -2,6 +2,7 @@ package com.capgemini.HotelMolvenaGr1.Controller;
 import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
 import com.capgemini.HotelMolvenaGr1.Model.Room;
 import com.capgemini.HotelMolvenaGr1.Repository.RoomRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -34,7 +35,9 @@ public class HotelController {
 //        return newGuest.getGuestList();
 //    }
 
+    @Autowired
     private RoomRepository roomRepository;
+
 
     @RequestMapping(value = "api/rooms/get", method = RequestMethod.GET)
     public Iterable<Room> index(){
