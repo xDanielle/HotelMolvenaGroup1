@@ -1,5 +1,6 @@
-package com.capgemini.HotelMolvenaGr1;
+package com.capgemini.HotelMolvenaGr1.Repository;
 
+import com.capgemini.HotelMolvenaGr1.ERoomType;
 import com.capgemini.HotelMolvenaGr1.Model.Room;
 import org.springframework.stereotype.Repository;
 
