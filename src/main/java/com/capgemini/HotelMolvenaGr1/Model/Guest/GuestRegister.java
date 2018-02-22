@@ -1,4 +1,4 @@
-package com.capgemini.HotelMolvenaGr1.Repository;
+package com.capgemini.HotelMolvenaGr1.Model.Guest;
 
 import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
 
@@ -7,11 +7,6 @@ import java.util.ArrayList;
 public class GuestRegister {
     ArrayList<Guest> guestList = new ArrayList<Guest>();
 
-    public void addGuest(String firstName, String lastName, String address, String postalCode, String town,
-                         String country, String telephoneNumber, String emailAddress) {
-        guestList.add(new Guest(firstName, lastName,
-                address, postalCode, town, country, telephoneNumber, emailAddress));
-    }
 
     public boolean searchGuest(String firstName) {
             for(Guest list : guestList){
