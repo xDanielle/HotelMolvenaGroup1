@@ -25,8 +25,6 @@ public class GuestRepository {
         Guest newGuest2 = new Guest();
         newGuest2.setFirstName("Aap");
         newGuest2.setLastName("Taal");
-        newGuest2.setFirstName("Henk");
-        newGuest2.setLastName("Vol");
         newGuest2.setAddress("sp");
         newGuest2.setCountry("hol");
         newGuest2.setEmailAddress("@");

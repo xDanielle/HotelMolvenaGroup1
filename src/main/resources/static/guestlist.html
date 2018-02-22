@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: yellow;
+}
+</style>
 </head>
 <body>
 <h2>Guest list</h2>
 
-<table id ="guests">
+<table id="guest">
     <tr>
-        <th>last name</th>
-        <th>first name</th>
-        <th>address</th>
-        <th>postal code</th>
-        <th>town</th>
-        <th>country</th>
-        <th>telephone number</th>
-        <th>e-mail address</th>
-    </tr>
-    <tr>
-        <td id="naam1">Pieterse</td>
-        <td>Piet</td>
-        <td>Jutphaseweg 1</td>
-        <td>Utrecht</td>
-        <td>Nederland</td>
-        <td>030-1111111</td>
-        <td>mail@mail.org</td>
+        <th>First name</th>
+        <th>Last name</th>
+        <!--<th>Address</th>-->
+        <!--<th>Country</th>-->
+        <!--<th>Town</th>-->
+        <!--<th>Postalcode</th>-->
+        <!--<th>Telephonenumber</th>-->
+        <!--<th>Emailnumber</th>-->
     </tr>
 </table>
 
