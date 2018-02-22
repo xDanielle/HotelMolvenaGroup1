@@ -8,32 +8,17 @@
 
 <h1 id="title">New guest</h1>
 
-<div id="title">lastName</div>
-<input id="nameInput"><br><br>
-
-<div id="title">firstName</div>
-<input id="firstnameInput"><br><br>
-
-<div id="title">address</div>
-<input id="addressInput"><br><br>
-
-<div id="title">postalCode</div>
-<input id="postalcodeInput"><br><br>
-
-<div id="title">town</div>
-<input id="townInput"><br><br>
-
-<div id="title">country</div>
-<input id="countryInput"><br><br>
-
-<div id="title">telephone number</div>
-<input id="telephonenumberInput"><br><br>
-
-<div id="title">e-mail address</div>
-<input id="emailInput"><br><br>
+<input type="text" id="lastname" name="lastname" placeholder="last name" required>
+<input type="text" id="firstname" name="firstname" placeholder="first name">
+<input type="text" id="address" name="address" placeholder="address">
+<input type="text" id="postalcode" name="postalcode" placeholder="postal code">
+<input type="text" id="town" name="town" placeholder="town">
+<input type="text" id="country" name="country" placeholder="country">
+<input type="text" id="telephonenumber" name="telephonenumber" placeholder="telephone number">
+<input type="text" id="email" name="email" placeholder="e-mail">
 
 
-<button id="sayHelloBtn"> Click </button>
+<button type="button" onclick="postData();">Save Guest</button>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/Guestregistration.js"></script>
 </body>

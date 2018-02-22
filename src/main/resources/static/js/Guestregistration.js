@@ -1,45 +1,36 @@
-function sayHello(name) {
-   $.get("/api/sayHello?name=" + name, function(result){
-   $("#title").text(result);
-   });
+function postData() {
+    // Get values from input texts.
+    var inputLastname = $("#lastname").val();
+    var inputFirstname = $("#firstname").val();
+
+    if(inputLastname == "") {
+        $("#errorMessage").val("Fill in last name.")
+        return;
+    }
+
+    var newGuestObject = {
+        lastname : inputLastname,
+        firstname : inputFirstname
+    };
+
+
+
+    var newGuest = JSON.stringify(newGuestObject);
+
+    $.ajax({
+        url : "http://localhost:8080/api/guest/save",
+        type : "post",
+        data : newGuest,
+        contentType : "application/json",
+        success : function(data) {
+            $("#lastname").val("");
+            $("#firstname").val("");
+            getData();
+        }
+    });
 }
-
-$("#sayHelloBtn").click(function(){
-    var name = $("#nameInput").val();
-    sayHello(name);
+/*
+$(document).ready(function() {
+    getData();
 });
-
-$("#sayHelloBtn").click(function(){
-    var name = $("#firstnameInput").val();
-    sayHello(name);
-});
-
-$("#sayHelloBtn").click(function(){
-    var name = $("#addressInput").val();
-    sayHello(name);
-});
-
-$("#sayHelloBtn").click(function(){
-    var name = $("#postalcodeInput").val();
-    sayHello(name);
-});
-
-$("#sayHelloBtn").click(function(){
-    var name = $("#townInput").val();
-    sayHello(name);
-});
-
-$("#sayHelloBtn").click(function(){
-    var name = $("#countryInput").val();
-    sayHello(name);
-});
-
-$("#sayHelloBtn").click(function(){
-    var name = $("#telephonenumberInput").val();
-    sayHello(name);
-});
-
-$("#sayHelloBtn").click(function(){
-    var name = $("#emailInput").val();
-    sayHello(name);
-});
+*/
