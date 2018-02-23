@@ -17,8 +17,7 @@ function getData() {
 		url : "http://localhost:8080/api/rooms/get",
 		type : "get",
 		success: function(data){
-			console.log("this is the data:" + data);
-
+			
 			var roomTableContent = "";
 			console.log("roomObject");
 
@@ -41,7 +40,7 @@ function getData() {
 }
 
 function deleteRoom(roomID){
-                console.log("verwijdertttttddd???")
+                console.log("function deleteroom is being used")
                     $.ajax({
                         url : "http://localhost:8080/api/rooms/delete", 
                         type : "delete",
@@ -49,9 +48,10 @@ function deleteRoom(roomID){
                         success : function() {
                             console.log("Delete is initiated");
                             $("#roomTable").html("");
-                            getData();
+
                         }
                     })
+                    getData();
                 }
 
 
