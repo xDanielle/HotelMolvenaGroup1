@@ -43,6 +43,12 @@ public class GuestRepository {
        return guest;
     }
 
+
+    // i want to remember the guest
+    public Guest rememberGuest(Guest guest){
+        return guest;
+    }
+
     public String searchGuest(){
         GuestRegister guest = new GuestRegister();
         boolean result = guest.searchGuest("Sasha");
