@@ -17,13 +17,16 @@ function getData() {
 		success: function(data){
 			console.log("this is the data:" + data);
 
-			var roomObject = "";
+			var roomTable = "";
 			console.log("roomObject");
 
 
 				$.each(data, function(index, current) {
 
-				 	roomObject = roomObject + "</br>" + "Roomtype: " + current.roomType + " RoomID: " + current.roomID + " Price: " + current.defaultPrice + " Availability: " + current.available;
+				 	
+				 	var columnRow = "<tr><td>" + current.roomID + "</td><td>" + current.roomType + "</td><td>" + current.defaultPrice + "</td><td>" + current.available "</td></tr>";
+
+				 	roomTable += columnRow;
 
 				});
 
@@ -42,7 +45,7 @@ function getData() {
 
 
 
-			$("#listOfRooms").html(roomObject);
+			$("#roomTable").append(roomTable);
 
 		}
 
