@@ -23,10 +23,22 @@ tr:nth-child(even) {
 </style>
 </head>
 <body>
-<h2>Guest list</h2>
+<h1>Guest list</h1>
+
+<form>
+    <h2> Search:
+        <input type = "text" id="search">
+        <button type="button"> Search guest </button>
+        <button type="button"> Alter guest </button>
+        <button type="button"> Remove guest </button>
+    </h2>
+</form>
+
+
 
 <table id="guest">
     <tr>
+        <th></th>
         <th>First name</th>
         <th>Last name</th>
         <th>Address</th>
