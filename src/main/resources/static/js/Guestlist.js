@@ -7,15 +7,17 @@ $(document).ready(function(){
             var guestList = '';
 
             $.each(data, function(index, value){
-                        var columnRow = "<tr><td>" + value.firstName + "</td><td>" +
+                        var columnRow = "<tr><td><input type='checkbox'</td><td>" + value.firstName + "</td><td>" +
                         value.lastName + "<td>" + value.address + "</td><td>" + value.country +
                         "</td><td>" + value.town + "</td><td>" + value.postalCode + "</td><td>" +
                          value.telephoneNumber + "</td><td>" + value.emailAddress + "</td></tr>";
                         guestList+=columnRow;
                     });
-
              $("#guest").append(guestList);
         }
     });
 });
+
+
+
 

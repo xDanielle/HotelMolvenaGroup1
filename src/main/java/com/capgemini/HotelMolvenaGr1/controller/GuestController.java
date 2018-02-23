@@ -1,7 +1,7 @@
-package com.capgemini.HotelMolvenaGr1.Controller;
+package com.capgemini.HotelMolvenaGr1.controller;
 
-import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
-import com.capgemini.HotelMolvenaGr1.Model.Guest.GuestRegister;
+import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
+import com.capgemini.HotelMolvenaGr1.model.Guest.GuestRegister;
 import com.capgemini.HotelMolvenaGr1.Repository.GuestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,17 +25,6 @@ public class GuestController {
         guestRepository.saveGuestList(guestToSave);
     }
 
-
-
-    public String searchGuest(){
-        GuestRegister guest = new GuestRegister();
-        boolean result = guest.searchGuest("Sasha");
-        if(result) {
-            return "found";
-        }else{
-            return "not found";
-        }
-    }
 
     @RequestMapping("/api/guest")
     public List<Guest> removeGuest() {

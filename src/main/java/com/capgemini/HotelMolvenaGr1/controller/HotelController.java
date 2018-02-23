@@ -1,6 +1,6 @@
-package com.capgemini.HotelMolvenaGr1.Controller;
-import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
-import com.capgemini.HotelMolvenaGr1.Model.Room;
+package com.capgemini.HotelMolvenaGr1.controller;
+import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
+import com.capgemini.HotelMolvenaGr1.model.Room;
 import com.capgemini.HotelMolvenaGr1.Repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

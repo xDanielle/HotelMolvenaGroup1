@@ -1,4 +1,4 @@
-package com.capgemini.HotelMolvenaGr1.Model;
+package com.capgemini.HotelMolvenaGr1.model;
 import com.capgemini.HotelMolvenaGr1.ERoomType;
 
 public class Room {

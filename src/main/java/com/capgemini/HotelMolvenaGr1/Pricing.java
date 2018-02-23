@@ -1,6 +1,6 @@
 package com.capgemini.HotelMolvenaGr1;
 
-import com.capgemini.HotelMolvenaGr1.Model.Room;
+import com.capgemini.HotelMolvenaGr1.model.Room;
 
 public class Pricing {
 

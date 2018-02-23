@@ -1,6 +1,7 @@
 package com.capgemini.HotelMolvenaGr1.Repository;
 
-import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
+import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
+import com.capgemini.HotelMolvenaGr1.model.Guest.GuestRegister;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -42,4 +43,15 @@ public class GuestRepository {
        guestList.add(guest);
        return guest;
     }
+
+    public String searchGuest(){
+        GuestRegister guest = new GuestRegister();
+        boolean result = guest.searchGuest("Sasha");
+        if(result) {
+            return "found";
+        }else{
+            return "not found";
+        }
+    }
+
 }

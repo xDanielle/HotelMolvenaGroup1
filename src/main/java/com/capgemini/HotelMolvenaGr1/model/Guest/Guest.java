@@ -1,6 +1,4 @@
-package com.capgemini.HotelMolvenaGr1.Model.Guest;
-
-import java.util.ArrayList;
+package com.capgemini.HotelMolvenaGr1.model.Guest;
 
 public class Guest {
     // start data of the guests
