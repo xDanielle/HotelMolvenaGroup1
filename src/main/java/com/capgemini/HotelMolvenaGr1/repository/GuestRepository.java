@@ -43,14 +43,19 @@ public class GuestRepository {
        return guest;
     }
 
-    public String searchGuest(){
-        GuestRegister guest = new GuestRegister();
-        boolean result = guest.searchGuest("Sasha");
-        if(result) {
-            return "found";
-        }else{
-            return "not found";
-        }
-    }
+    public List<Guest> search(String searchTerm) {
+        String searchTermLower;
+        String lastNameLower;
+        List<Guest> searchResults = new ArrayList<>();
+        searchTermLower = searchTerm.toLowerCase();
 
+        for (Guest guest : guestList) {
+            lastNameLower = guest.getLastName().toLowerCase();
+            if (lastNameLower.contains(searchTermLower)) {
+                searchResults.add(guest);
+
+            }
+        }
+        return searchResults;
+    }
 }

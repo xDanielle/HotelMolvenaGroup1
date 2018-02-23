@@ -25,6 +25,10 @@ public class GuestController {
         guestRepository.saveGuestList(guestToSave);
     }
 
+    @RequestMapping(value="api/search/{0}", method = RequestMethod.GET)
+    public List<Guest> searchGuests(@PathVariable String searchTerm) {
+        return this.guestRepository.search(searchTerm);
+    }
 
     @RequestMapping("/api/guest")
     public List<Guest> removeGuest() {
