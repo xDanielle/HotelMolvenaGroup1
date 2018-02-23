@@ -1,6 +1,6 @@
 package com.capgemini.HotelMolvenaGr1.controller;
 import com.capgemini.HotelMolvenaGr1.ERoomType;
-import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
+import com.capgemini.HotelMolvenaGr1.model.Guest;
 import com.capgemini.HotelMolvenaGr1.model.Room;
 import com.capgemini.HotelMolvenaGr1.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class HotelController {
     }
 //
 //    @RequestMapping("/api/guest")
-//    public List<Guest> getGuests(){
+//    public List<guest> getGuests(){
 //        GuestRegister newGuest = new GuestRegister();
 //        newGuest.addGuest("Sasha", "Vollebregt", "Sportlaan 116", "1072GG",
 //                "London", "Netheraldo", "0640718383", "volle@gmail.com");

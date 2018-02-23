@@ -1,7 +1,6 @@
 package com.capgemini.HotelMolvenaGr1.repository;
 
-import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
-import com.capgemini.HotelMolvenaGr1.model.Guest.GuestRegister;
+import com.capgemini.HotelMolvenaGr1.model.Guest;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
