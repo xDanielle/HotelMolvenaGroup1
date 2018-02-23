@@ -1,6 +1,4 @@
-package com.capgemini.HotelMolvenaGr1.Model.Guest;
-
-import com.capgemini.HotelMolvenaGr1.Model.Guest.Guest;
+package com.capgemini.HotelMolvenaGr1.model.Guest;
 
 import java.util.ArrayList;
 
