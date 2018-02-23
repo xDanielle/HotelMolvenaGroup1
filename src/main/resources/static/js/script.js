@@ -45,7 +45,7 @@ function deleteRoom(roomID){
                     $.ajax({
                         url : "http://localhost:8080/api/rooms/delete", 
                         type : "delete",
-                        // contentType : "application/json",
+                        contentType : "application/json",
                         success : function() {
                             console.log("Delete is initiated");
                             $("#roomTable").html("");
