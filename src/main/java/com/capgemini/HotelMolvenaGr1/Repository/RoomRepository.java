@@ -16,26 +16,26 @@ public class RoomRepository {
     ArrayList<Room> rooms;
 
     public RoomRepository() {
-    this.rooms = new ArrayList<>();
+        this.rooms = new ArrayList<>();
 
-    Room room1 = new Room();
-    room1.setRoomType(ERoomType.STANDARD);
-    room1.setAvailable(true);
-    room1.setRoomID(1);
-    room1.setDefaultPrice(89);
+        Room room1 = new Room();
+        room1.setRoomType(ERoomType.STANDARD);
+        room1.setAvailable(true);
+        room1.setRoomID(1);
+        room1.setDefaultPrice(89);
 
-    Room room2 = new Room();
-    room2.setRoomType(ERoomType.LUXURY);
-    room2.setAvailable(true);
-    room2.setRoomID(2);
-    room2.setDefaultPrice(149);
+        Room room2 = new Room();
+        room2.setRoomType(ERoomType.LUXURY);
+        room2.setAvailable(true);
+        room2.setRoomID(2);
+        room2.setDefaultPrice(149);
 
-    this.rooms.add(room1);
-    this.rooms.add(room2);
+        this.rooms.add(room1);
+        this.rooms.add(room2);
 
     }
 
-    public Room save(Room room){
+    public Room save(Room room) {
         rooms.add(room);
         return room;
     }
@@ -44,9 +44,17 @@ public class RoomRepository {
         return rooms;
     }
 
-    public Room changeRoomType(Room room, ERoomType roomType){
+    public Room changeRoomType(Room room, ERoomType roomType) {
         this.room.setRoomType(roomType);
         return room;
+    }
+
+    public void deleteRoom(int roomID) {
+        for (Room room : this.rooms) {
+            if (room.getRoomID() == roomID) {
+                rooms.remove(room);
+            }
+        }
     }
 
     // Getters setters
@@ -60,10 +68,6 @@ public class RoomRepository {
     }
 
     // Methodes
-
-
-
-
 
 
     // alter a roomType
