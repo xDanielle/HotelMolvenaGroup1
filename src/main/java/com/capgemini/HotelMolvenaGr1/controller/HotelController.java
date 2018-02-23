@@ -49,6 +49,11 @@ public class HotelController {
         roomRepository.save(roomToSave);
     }
 
+    @RequestMapping(value = "api/rooms/delete", method = RequestMethod.DELETE)
+    public void deleteRoom(@RequestBody int roomID){
+        roomRepository.deleteRoom(roomID);
+    }
+
     // public void checkIn();
 
     // public void checkOut();
