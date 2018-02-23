@@ -49,16 +49,14 @@ public class RoomRepository {
         return room;
     }
 
-    public void deleteRoom(int roomID) {
+    public void deleteRoom() {
         for (Room room : this.rooms) {
-            if (room.getRoomID() == roomID) {
                 rooms.remove(room);
             }
         }
-    }
 
-    public void changeRoom(int roomID, ERoomType roomType){
-        for (Room room : this.rooms){
+    public void changeRoom(int roomID, ERoomType roomType) {
+        for (Room room : this.rooms) {
             if (room.getRoomID() == roomID) {
                 room.setRoomType(roomType);
             }
@@ -79,4 +77,4 @@ public class RoomRepository {
     // Methodes
 
 
- }
+}
