@@ -1,7 +1,7 @@
 package com.capgemini.HotelMolvenaGr1.Repository;
 
 import com.capgemini.HotelMolvenaGr1.ERoomType;
-import com.capgemini.HotelMolvenaGr1.Model.Room;
+import com.capgemini.HotelMolvenaGr1.model.Room;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
