@@ -2,7 +2,7 @@ package com.capgemini.HotelMolvenaGr1.controller;
 
 import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
 import com.capgemini.HotelMolvenaGr1.model.Guest.GuestRegister;
-import com.capgemini.HotelMolvenaGr1.Repository.GuestRepository;
+import com.capgemini.HotelMolvenaGr1.repository.GuestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

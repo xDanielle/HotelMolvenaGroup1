@@ -1,8 +1,8 @@
-package com.capgemini.HotelMolvenaGr1.Controller;
+package com.capgemini.HotelMolvenaGr1.controller;
 import com.capgemini.HotelMolvenaGr1.ERoomType;
 import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
 import com.capgemini.HotelMolvenaGr1.model.Room;
-import com.capgemini.HotelMolvenaGr1.Repository.RoomRepository;
+import com.capgemini.HotelMolvenaGr1.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +15,7 @@ public class HotelController {
 
     //private Staff staff;
 
-    //private Booking booking;
+    //private booking booking;
 
     @GetMapping("/voorbeeld")
     public String Voorbeeld() {
