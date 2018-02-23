@@ -1,7 +1,8 @@
 package com.capgemini.HotelMolvenaGr1.controller;
-import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
+import com.capgemini.HotelMolvenaGr1.ERoomType;
+import com.capgemini.HotelMolvenaGr1.model.Guest;
 import com.capgemini.HotelMolvenaGr1.model.Room;
-import com.capgemini.HotelMolvenaGr1.Repository.RoomRepository;
+import com.capgemini.HotelMolvenaGr1.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ public class HotelController {
 
     //private Staff staff;
 
-    //private Booking booking;
+    //private booking booking;
 
     @GetMapping("/voorbeeld")
     public String Voorbeeld() {
@@ -26,7 +27,7 @@ public class HotelController {
     }
 //
 //    @RequestMapping("/api/guest")
-//    public List<Guest> getGuests(){
+//    public List<guest> getGuests(){
 //        GuestRegister newGuest = new GuestRegister();
 //        newGuest.addGuest("Sasha", "Vollebregt", "Sportlaan 116", "1072GG",
 //                "London", "Netheraldo", "0640718383", "volle@gmail.com");
@@ -47,6 +48,16 @@ public class HotelController {
     @RequestMapping(value = "api/rooms/save", method = RequestMethod.POST)
     public void save(@RequestBody Room roomToSave){
         roomRepository.save(roomToSave);
+    }
+
+    @RequestMapping(value = "api/rooms/delete", method = RequestMethod.DELETE)
+    public void deleteRoom(@RequestBody int roomID){
+        roomRepository.deleteRoom(roomID);
+    }
+
+    @RequestMapping(value = "api/rooms/change", method = RequestMethod.POST)
+    public void changeRoom(@RequestBody int roomID, ERoomType roomType){
+        roomRepository.changeRoom(roomID, roomType);
     }
 
     // public void checkIn();

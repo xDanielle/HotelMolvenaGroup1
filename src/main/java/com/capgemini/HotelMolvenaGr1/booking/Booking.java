@@ -1,5 +1,4 @@
-package com.capgemini.HotelMolvenaGr1.Booking;
-import java.text.SimpleDateFormat;
+package com.capgemini.HotelMolvenaGr1.booking;
 import java.util.Date;
 
 /**
@@ -13,7 +12,7 @@ import java.util.Date;
 
  Date checkInDate = theFormatOfDate.parse("12-10-2018");
  Date checkOutDate = theFormatOfDate.parse("12-12-2018");
- Booking enterDate = new Booking(checkInDate, checkOutDate);
+ booking enterDate = new booking(checkInDate, checkOutDate);
 
  enterDate.checkAvailability();
  */

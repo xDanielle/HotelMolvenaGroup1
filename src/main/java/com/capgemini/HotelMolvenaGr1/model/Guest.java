@@ -1,4 +1,4 @@
-package com.capgemini.HotelMolvenaGr1.model.Guest;
+package com.capgemini.HotelMolvenaGr1.model;
 
 public class Guest {
     // start data of the guests
