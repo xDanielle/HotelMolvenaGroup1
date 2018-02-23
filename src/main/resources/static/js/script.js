@@ -17,46 +17,30 @@ function getData() {
 		success: function(data){
 			console.log("this is the data:" + data);
 
-			var roomTable = "";
+			var roomTableContent = "";
 			console.log("roomObject");
 
-
 				$.each(data, function(index, current) {
+                    console.log("each function");
+				 	var columnRow = "<tr><td>" + current.roomID + "</td><td>" + current.roomType + "</td><td>" + current.defaultPrice + "</td><td>" + current.available + "</td></tr>";
 
-				 	
-				 	var columnRow = "<tr><td>" + current.roomID + "</td><td>" + current.roomType + "</td><td>" + current.defaultPrice + "</td><td>" + current.available "</td></tr>";
-
-				 	roomTable += columnRow;
+				 	roomTableContent += columnRow;
 
 				});
+                console.log(roomTableContent);
+				$(".roomTable").append(roomTableContent);
 
+				}
 
-
-				// $.each(data, function(index, value){
-    //                     var columnRow = "<tr><td>" + value.firstName + "</td><td>" +
-    //                     value.lastName + "<td>" + value.address + "</td><td>" + value.country +
-    //                     "</td><td>" + value.town + "</td><td>" + value.postalCode + "</td><td>" +
-    //                      value.telephoneNumber + "</td><td>" + value.emailAddress + "</td></tr>";
-    //                     guestList+=columnRow;
-    //                 });
-
-    //          $("#guest").append(guestList);
-
-
-
-
-			$("#roomTable").append(roomTable);
-
-		}
-
-	});
+		});
 }
 
 
 function postData(){
+	// The postData function is triggered by the add new room button. This function has to post the filled in data into the table.
 
-	//
-
+    // First we need to put the values of the input fields into variables
+    var
 
 
 
