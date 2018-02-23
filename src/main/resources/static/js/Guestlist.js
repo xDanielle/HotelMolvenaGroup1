@@ -35,8 +35,10 @@ $(document).ready(function(){
       //iterate over the table to find the checkbox
  $("#alterBtn").click(function(){
       $("#guest tr").each(function(){
+
           $("input:checked").each(function(){
-              // Post the data to java that will reset
+
+              console.log("found");
 
           });
       });
