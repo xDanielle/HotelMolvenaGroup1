@@ -1,4 +1,5 @@
 package com.capgemini.HotelMolvenaGr1.Controller;
+import com.capgemini.HotelMolvenaGr1.ERoomType;
 import com.capgemini.HotelMolvenaGr1.model.Guest.Guest;
 import com.capgemini.HotelMolvenaGr1.model.Room;
 import com.capgemini.HotelMolvenaGr1.Repository.RoomRepository;
@@ -52,6 +53,11 @@ public class HotelController {
     @RequestMapping(value = "api/rooms/delete", method = RequestMethod.DELETE)
     public void deleteRoom(@RequestBody int roomID){
         roomRepository.deleteRoom(roomID);
+    }
+
+    @RequestMapping(value = "api/rooms/change", method = RequestMethod.POST)
+    public void changeRoom(@RequestBody int roomID, ERoomType roomType){
+        roomRepository.changeRoom(roomID, roomType);
     }
 
     // public void checkIn();

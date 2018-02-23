@@ -57,6 +57,15 @@ public class RoomRepository {
         }
     }
 
+    public void changeRoom(int roomID, ERoomType roomType){
+        for (Room room : this.rooms){
+            if (room.getRoomID() == roomID) {
+                room.setRoomType(roomType);
+            }
+        }
+
+    }
+
     // Getters setters
 
     public ArrayList<Room> getRoomList() {
@@ -70,12 +79,4 @@ public class RoomRepository {
     // Methodes
 
 
-    // alter a roomType
-//    public Room alterRoom(int roomID, ERoomType roomType) {
-//        if (room.getRoomID() == roomID) {
-//            this.room.setRoomType(roomType);
-//        }
-//        return room;
-//    }
-
-}
+ }
