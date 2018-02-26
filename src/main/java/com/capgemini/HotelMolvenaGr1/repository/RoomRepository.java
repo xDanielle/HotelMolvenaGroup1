@@ -35,6 +35,7 @@ public class RoomRepository {
 
     }
 
+    // Methodes
     public Room save(Room room) {
         rooms.add(room);
         return room;
@@ -74,7 +75,6 @@ public class RoomRepository {
         this.rooms = roomList;
     }
 
-    // Methodes
 
 
 }
