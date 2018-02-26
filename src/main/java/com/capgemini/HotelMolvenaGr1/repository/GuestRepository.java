@@ -43,19 +43,27 @@ public class GuestRepository {
        return guest;
     }
 
+
     public List<Guest> search(String searchTerm) {
         String searchTermLower;
-        String lastNameLower;
         List<Guest> searchResults = new ArrayList<>();
         searchTermLower = searchTerm.toLowerCase();
 
         for (Guest guest : guestList) {
-            lastNameLower = guest.getLastName().toLowerCase();
+            String lastNameLower = guest.getLastName().toLowerCase();
             if (lastNameLower.contains(searchTermLower)) {
                 searchResults.add(guest);
 
             }
         }
+
         return searchResults;
     }
+
+    // i want to remember the guest
+    public Guest rememberGuest(Guest guest){
+        return guest;
+    }
+
+
 }
