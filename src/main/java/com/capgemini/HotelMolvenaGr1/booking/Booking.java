@@ -32,7 +32,6 @@ public class Booking {
     public Booking(){
 
     }
-
     /**
      * You want to check if check in date if rooms are available and after say check out
      */

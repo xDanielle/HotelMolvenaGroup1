@@ -1,31 +1,36 @@
 package com.capgemini.HotelMolvenaGr1.controller;
 
+import org.springframework.web.bind.annotation.RestController;
+public class BookingController {
+
+
 import com.capgemini.HotelMolvenaGr1.booking.Booking;
 import com.capgemini.HotelMolvenaGr1.repository.BookingRepository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class BookingController {
+    @RestController
+    public class BookingController {
 
-    private BookingRepository bookingRepository;
+        private BookingRepository bookingRepository;
 
-    // RequestMappings
+        // RequestMappings
 
-    @RequestMapping(value = "api/bookings/get", method = RequestMethod.GET)
-    public Iterable<Booking> index() {
-        return bookingRepository.getBookings();
+        @RequestMapping(value = "api/bookings/get", method = RequestMethod.GET)
+        public Iterable<Booking> index() {
+            return bookingRepository.getBookings();
+        }
+
+        @RequestMapping(value = "api/bookings/save", method = RequestMethod.POST)
+        public void save(Booking bookingToSave) {
+            bookingRepository.save(bookingToSave);
+        }
+
+        @RequestMapping(value = "api/bookings/delete", method = RequestMethod.DELETE)
+        public void deleteBooking() {
+            bookingRepository.deleteBooking();
+        }
+
     }
-
-    @RequestMapping(value = "api/bookings/save", method = RequestMethod.POST)
-    public void save(Booking bookingToSave) {
-        bookingRepository.save(bookingToSave);
-    }
-
-    @RequestMapping(value = "api/bookings/delete", method = RequestMethod.DELETE)
-    public void deleteBooking() {
-        bookingRepository.deleteBooking();
-    }
-
 }
