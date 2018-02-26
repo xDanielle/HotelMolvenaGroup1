@@ -43,48 +43,14 @@ public class GuestRepository {
        return guest;
     }
 
-    public String searchGuest(){
+    public String searchGuest() {
         GuestRegister guest = new GuestRegister();
         boolean result = guest.searchGuest("Sasha");
-        if(result) {
+        if (result) {
             return "found";
-        }else{
+        } else {
             return "not found";
-
-
-    public List<Guest> search(String searchTerm) {
-        String searchTermLower;
-        List<Guest> searchResults = new ArrayList<>();
-        searchTermLower = searchTerm.toLowerCase();
-
-        for (Guest guest : guestList) {
-            String lastNameLower = guest.getLastName().toLowerCase();
-            if (lastNameLower.contains(searchTermLower)) {
-                searchResults.add(guest);
-            }
-        }
-        return searchResults;
-    }
-
-    // i want to remember the guest
-    public Guest rememberGuest(Guest guest){
-        return guest;
-    }
-
-    public void deleteGuest() {
-        for (Guest guest : guestList) {
-            guestList.remove(guest);
         }
     }
-
-    public void changeGuest(String firstName, String lastName, String address, String postalCode, String town, String country, String telephoneNumber, String emailAddress) {
-        for (Guest guest : guestList) {
-           // if (guest.getRoomID() == roomID) {
-           //     guest.setRoomType(roomType);
-           // }
-        }
-
-    }
-
 
 }
