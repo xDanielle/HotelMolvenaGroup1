@@ -1,4 +1,7 @@
 package com.capgemini.HotelMolvenaGr1.booking;
+import com.capgemini.HotelMolvenaGr1.model.Guest;
+import com.capgemini.HotelMolvenaGr1.model.Room;
+
 import java.util.Date;
 
 /**
@@ -28,6 +31,9 @@ public class Booking {
     private boolean wantsBabybed;
 
     private int bookingID;
+
+    private Guest guest;
+    private Room room;
 
     public Booking(){
 
