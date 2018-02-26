@@ -30,8 +30,16 @@ public class RoomRepository {
         room2.setRoomID(2);
         room2.setDefaultPrice(149);
 
+        Room room3 = new Room();
+        room3.setRoomType(ERoomType.HONEYMOON_SUITE);
+        room3.setAvailable(true);
+        room3.setRoomID(3);
+        room3.setDefaultPrice(345);
+
         this.rooms.add(room1);
         this.rooms.add(room2);
+        this.rooms.add(room3);
+
 
     }
 
@@ -52,9 +60,9 @@ public class RoomRepository {
 
     public void deleteRoom() {
         for (Room room : this.rooms) {
-                rooms.remove(room);
-            }
+            rooms.remove(room);
         }
+    }
 
     public void changeRoom(int roomID, ERoomType roomType) {
         for (Room room : this.rooms) {
@@ -74,7 +82,6 @@ public class RoomRepository {
     public void setRoomList(ArrayList<Room> roomList) {
         this.rooms = roomList;
     }
-
 
 
 }

@@ -14,19 +14,18 @@ public class BookingController {
     // RequestMappings
 
     @RequestMapping(value = "api/bookings/get", method = RequestMethod.GET)
-    public Iterable<Booking> index(){
+    public Iterable<Booking> index() {
         return bookingRepository.getBookings();
     }
 
     @RequestMapping(value = "api/bookings/save", method = RequestMethod.POST)
-    public void save(Booking bookingToSave){
+    public void save(Booking bookingToSave) {
         bookingRepository.save(bookingToSave);
     }
 
     @RequestMapping(value = "api/bookings/delete", method = RequestMethod.DELETE)
-    public void deleteBooking(){
+    public void deleteBooking() {
         bookingRepository.deleteBooking();
     }
-    
 
 }

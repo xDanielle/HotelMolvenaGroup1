@@ -14,7 +14,7 @@ public class BookingRepository {
 
     ArrayList<Booking> bookings = new ArrayList<>();
 
-    public BookingRepository(){
+    public BookingRepository() {
         this.bookings = new ArrayList<>();
 
         Booking booking1 = new Booking();
@@ -24,13 +24,13 @@ public class BookingRepository {
 
     // Methods
 
-    public Booking save(Booking booking){
+    public Booking save(Booking booking) {
         bookings.add(booking);
         return booking;
     }
 
-    public void deleteBooking(){
-        for (Booking booking : bookings){
+    public void deleteBooking() {
+        for (Booking booking : bookings) {
             bookings.remove(booking);
         }
     }

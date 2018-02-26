@@ -27,6 +27,8 @@ public class Booking {
     private boolean isPaid;
     private boolean wantsBabybed;
 
+    private int bookingID;
+
     public Booking(){
 
     }
