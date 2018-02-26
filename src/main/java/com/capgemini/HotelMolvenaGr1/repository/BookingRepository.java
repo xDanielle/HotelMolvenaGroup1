@@ -54,5 +54,4 @@ public class BookingRepository {
         this.bookings = bookings;
     }
 
-
 }
