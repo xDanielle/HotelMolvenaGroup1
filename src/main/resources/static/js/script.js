@@ -17,7 +17,7 @@ function getData() {
 		url : "http://localhost:8080/api/rooms/get",
 		type : "get",
 		success: function(data){
-			
+
 			var roomTableContent = "";
 			console.log("roomObject");
 
@@ -77,9 +77,11 @@ function postData(){
     available : inputAvailability
     };
 
+    // Make the object readable for the backend by parsing it to JSON
     var newRoom = JSON.stringify(newRoomObject);
     console.log(newRoom);
 
+    // Save the actual data to the repository
     $.ajax({
         url : "http://localhost:8080/api/rooms/save",
         type : "post",
@@ -91,11 +93,7 @@ function postData(){
 
         }
 
-
-
     })
-
-
 
 }
 
