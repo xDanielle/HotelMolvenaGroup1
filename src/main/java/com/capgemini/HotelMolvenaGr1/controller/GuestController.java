@@ -14,7 +14,7 @@ public class GuestController {
     @Autowired
     private GuestRepository guestRepository;
 
-    @RequestMapping(value="index", method= RequestMethod.GET)
+    @RequestMapping(value="get", method= RequestMethod.GET)
     public List<Guest> index(){
         return guestRepository.getGuestList();
     }

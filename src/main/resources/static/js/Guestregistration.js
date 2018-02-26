@@ -60,7 +60,7 @@ function postData() {
     console.log(newGuest);
 
     $.ajax({
-        url : "http://localhost:8080/api/guest/change",
+        url : "http://localhost:8080/api/guest/saved",
         type : "post",
         data : newGuest,
         contentType : "application/json",
@@ -73,7 +73,7 @@ function postData() {
             $("#country").val("");
             $("#telephonenumber").val("");
             $("#email").val("");
-            getData();
+
         }
     });
 }
