@@ -29,17 +29,17 @@ tr:nth-child(even) {
     <h2> Search:
         <input type = "text" id="search">
         <button type="button"> Search guest </button>
-        <button type="button"> Alter guest </button>
+        <button type="button" id="alterBtn"> Alter guest </button>
         <button type="button"> Remove guest </button>
     </h2>
 </form>
 
-
+<p id="text">hello</p>
 
 <table id="guest">
     <tr>
         <th></th>
-        <th>First name</th>
+        <th id="firstName">First name</th>
         <th>Last name</th>
         <th>Address</th>
         <th>Country</th>
@@ -49,6 +49,8 @@ tr:nth-child(even) {
         <th>Email</th>
     </tr>
 </table>
+
+<p id="try"> </p>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/Guestlist.js"></script>

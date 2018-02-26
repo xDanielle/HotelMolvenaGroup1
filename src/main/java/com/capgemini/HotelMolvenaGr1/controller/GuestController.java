@@ -45,6 +45,17 @@ public class GuestController {
         return removeGuest.getGuestList();
     }
 
+    @RequestMapping(value = "api/guest/delete", method = RequestMethod.DELETE)
+    public void deleteGuest()
+    {
+        guestRepository.deleteGuest();
+    }
+
+    @RequestMapping(value = "api/guest/change", method = RequestMethod.POST)
+    public void changeGuest(@RequestBody String firstName, String lastName, String address, String postalCode, String town, String country, String telephoneNumber, String emailAddress){
+        guestRepository.changeGuest(firstName, lastName, address, postalCode, town, country, telephoneNumber, emailAddress);
+    }
+
 
 
 }

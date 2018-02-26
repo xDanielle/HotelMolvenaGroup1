@@ -73,7 +73,8 @@ function postData() {
             $("#country").val("");
             $("#telephonenumber").val("");
             $("#email").val("");
-            getData();
         }
     });
 }
+
+
