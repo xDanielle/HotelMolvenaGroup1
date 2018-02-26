@@ -9,9 +9,10 @@
 </head>
 <body>
 
+
 <!--Inladen menu-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navigation">
-    <a class="navbar-brand" href="index.html">Hotel Molvena</a>
+    <a class="navbar-brand" href="index.html">Menu</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,10 +21,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link active" href="rooms.html">Rooms<span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="rooms.html">Kamers<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="guests.html">Guests</a>
+                <a class="nav-link" href="guests.html">Gasten</a>
             </li>
         </ul>
         <!--Hieronder staat een searchbar voor in het menu, momenteel even gedisabled-->
@@ -40,9 +41,7 @@
     <h2> Hotel Rooms </h2>
 
     <!--This button makes the modal to add a new room appear-->
-    <button type="button" class="btn btn-secondary addRoomButton" data-toggle="modal" data-target="#addRoomModal">Add
-        new room
-    </button>
+    <button type="button" class="btn btn-secondary addRoomButton" data-toggle="modal" data-target="#addRoomModal">Add new room</button>
 
     <div class="modal fade" id="addRoomModal" role="dialog">
         <div class="modal-dialog">
@@ -56,6 +55,7 @@
                 </div>
                 <div class="modal-body">
 
+<<<<<<< HEAD
                     <div class="form-group">
                         <form>
                             <label for="roomId" class="col-form-label">Room ID:</label>
@@ -77,21 +77,28 @@
                             <label for="roomAvailability">Select availability (select one):</label>
 
                             <input type="text" class="form-control" id="roomAvailability" placeholder="Room availability">
+=======
+                    <div class="modaltestje">
 
-                        </form>
+                        <input type="text" id="roomID" placeholder="Room ID" required>
+                        <input type="text" id="roomType" placeholder="Room Type" required>
+                        <input type="text" id="price" placeholder="Room Price" required>
+                        <input type="text" id="availability" placeholder="Availability" required>
+>>>>>>> 0a88159e5abc7f6ec8b91c674a9146969f16bf44
+
                     </div>
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="postData();">Add
-                    </button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="postData();">Add</button>
                     <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
                 </div>
             </div>
 
         </div>
     </div>
+
 
 
     <br>
@@ -114,7 +121,15 @@
     </table>
 
 
+
+
+
 </div>
+
+
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

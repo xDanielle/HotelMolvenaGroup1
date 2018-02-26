@@ -1,5 +1,4 @@
 package com.capgemini.HotelMolvenaGr1.controller;
-
 import com.capgemini.HotelMolvenaGr1.ERoomType;
 import com.capgemini.HotelMolvenaGr1.model.Guest;
 import com.capgemini.HotelMolvenaGr1.model.Room;
@@ -23,7 +22,7 @@ public class HotelController {
         return "<h1> Het voorbeeld werkt ook! <br><br> Verander deze pagina in de HotelController </h1>";
     }
 
-    public void greet() {
+    public void greet(){
         guest.greetGuest();
     }
 //
@@ -42,22 +41,22 @@ public class HotelController {
 
 
     @RequestMapping(value = "api/rooms/get", method = RequestMethod.GET)
-    public Iterable<Room> index() {
+    public Iterable<Room> index(){
         return roomRepository.getRooms();
     }
 
     @RequestMapping(value = "api/rooms/save", method = RequestMethod.POST)
-    public void save(@RequestBody Room roomToSave) {
+    public void save(@RequestBody Room roomToSave){
         roomRepository.save(roomToSave);
     }
 
     @RequestMapping(value = "api/rooms/delete", method = RequestMethod.DELETE)
-    public void deleteRoom() {
+    public void deleteRoom(){
         roomRepository.deleteRoom();
     }
 
     @RequestMapping(value = "api/rooms/change", method = RequestMethod.POST)
-    public void changeRoom(@RequestBody int roomID, ERoomType roomType) {
+    public void changeRoom(@RequestBody int roomID, ERoomType roomType){
         roomRepository.changeRoom(roomID, roomType);
     }
 

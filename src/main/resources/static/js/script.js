@@ -17,6 +17,7 @@ function getData() {
 		url : "http://localhost:8080/api/rooms/get",
 		type : "get",
 		success: function(data){
+			console.log("this is the data:" + data);
 
 			var roomTableContent = "";
 			console.log("roomObject");
@@ -40,7 +41,7 @@ function getData() {
 }
 
 function deleteRoom(roomID){
-                console.log("function deleteroom is being used")
+                console.log("verwijdertttttddd???")
                     $.ajax({
                         url : "http://localhost:8080/api/rooms/delete", 
                         type : "delete",
@@ -48,10 +49,9 @@ function deleteRoom(roomID){
                         success : function() {
                             console.log("Delete is initiated");
                             $("#roomTable").html("");
-
+                            getData();
                         }
                     })
-                    getData();
                 }
 
 
@@ -59,10 +59,10 @@ function postData(){
 	// The postData function is triggered by the add new room button. This function has to post the filled in data into the table.
 
     // First we need to put the values of the input fields into variables
-    var inputRoomID = $("#roomId").val();
+    var inputRoomID = $("#roomID").val();
     var inputRoomType = $("#roomType").val();
-    var inputPrice = $("#roomPrice").val();
-    var inputAvailability = $("#roomAvailability").val();
+    var inputPrice = $("#price").val();
+    var inputAvailability = $("#availability").val();
 
     if(inputRoomID == "") {
             $("#errorMessage").val("Fill in RoomID")
@@ -77,11 +77,9 @@ function postData(){
     available : inputAvailability
     };
 
-    // Make the object readable for the backend by parsing it to JSON
     var newRoom = JSON.stringify(newRoomObject);
     console.log(newRoom);
 
-    // Save the actual data to the repository
     $.ajax({
         url : "http://localhost:8080/api/rooms/save",
         type : "post",
@@ -93,7 +91,11 @@ function postData(){
 
         }
 
+
+
     })
+
+
 
 }
 

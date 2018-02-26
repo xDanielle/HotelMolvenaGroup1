@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Guest search</h1>
+
+<form>
+    <h2> Search:
+        <input type = "text" id="search">
+        <button type="button" onclick="postData();">Search guest</button>
+        <button type="button"> Alter guest </button>
+        <button type="button"> Remove guest </button>
+    </h2>
+</form>
+
+
+
+<table id="guest">
+    <tr>
+        <th></th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Address</th>
+        <th>Country</th>
+        <th>Town</th>
+        <th>Postalcode</th>
+        <th>Telephonenumber</th>
+        <th>Email</th>
+    </tr>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/guestsearch.js"></script>
+
+</body>
+</html>
