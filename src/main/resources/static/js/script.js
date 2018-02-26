@@ -59,10 +59,10 @@ function postData(){
 	// The postData function is triggered by the add new room button. This function has to post the filled in data into the table.
 
     // First we need to put the values of the input fields into variables
-    var inputRoomID = $("#roomID").val();
+    var inputRoomID = $("#roomId").val();
     var inputRoomType = $("#roomType").val();
-    var inputPrice = $("#price").val();
-    var inputAvailability = $("#availability").val();
+    var inputPrice = $("#roomPrice").val();
+    var inputAvailability = $("#roomAvailability").val();
 
     if(inputRoomID == "") {
             $("#errorMessage").val("Fill in RoomID")

@@ -40,7 +40,9 @@
     <h2> Hotel Rooms </h2>
 
     <!--This button makes the modal to add a new room appear-->
-    <button type="button" class="btn btn-secondary addRoomButton" data-toggle="modal" data-target="#addRoomModal">Add new room</button>
+    <button type="button" class="btn btn-secondary addRoomButton" data-toggle="modal" data-target="#addRoomModal">Add
+        new room
+    </button>
 
     <div class="modal fade" id="addRoomModal" role="dialog">
         <div class="modal-dialog">
@@ -54,26 +56,34 @@
                 </div>
                 <div class="modal-body">
 
-                    <div class="modaltestje">
+                    <div class="form-group">
+                        <form>
+                            <label for="roomId" class="col-form-label">Room ID:</label>
+                            <input type="text" class="form-control" id="roomId" placeholder="Room ID">
 
-                        <input type="text" id="roomID" placeholder="Room ID" required>
-                        <input type="text" id="roomType" placeholder="Room Type" required>
-                        <input type="text" id="price" placeholder="Room Price" required>
-                        <input type="text" id="availability" placeholder="Availability" required>
+                            <label for="roomType" class="col-form-label">Room Type:</label>
+                            <input type="text" class="form-control" id="roomType" placeholder="Room Type">
 
+                            <label for="roomPrice" class="col-form-label">Room Price:</label>
+                            <input type="text" class="form-control" id="roomPrice" placeholder="Room Price">
+
+                            <label for="roomAvailability" class="col-form-label">Availability:</label>
+                            <input type="text" class="form-control" id="roomAvailability" placeholder="Room availability">
+
+                        </form>
                     </div>
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="postData();">Add</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="postData();">Add
+                    </button>
                     <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
                 </div>
             </div>
 
         </div>
     </div>
-
 
 
     <br>
@@ -96,15 +106,7 @@
     </table>
 
 
-
-
-
 </div>
-
-
-
-
-
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
